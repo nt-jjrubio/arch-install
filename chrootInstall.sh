@@ -4,7 +4,7 @@ echo "KEYMAP=es" > /etc/vconsole.conf
 echo "Arch" > /etc/hostname
 mkinitcpio -P 
 passwd
-pacman -S refind
+yes | pacman -S refind neovim 
 refind-install
 exit
 
