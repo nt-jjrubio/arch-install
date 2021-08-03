@@ -26,12 +26,16 @@ mkfs.vfat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
 
 mount /dev/sda2 /mnt
-mkdir /mnt/boot
+mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
 
 
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base base-devel linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL http://192.168.1.51:8080/chrootInstall.sh)"; reboot
+arch-chroot /mnt sh -c "$(curl -fsSL http://192.168.1.51:8080/chrootInstall.sh)"; 
+umount /dev/sda1
+umount /dev/sda2
+
+reboot
