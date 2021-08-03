@@ -5,7 +5,8 @@ echo "Arch" > /etc/hostname
 mkinitcpio -p linux
 passwd
 #yes | pacman -S refind neovim 
-yes | pacman -S neovim network-manager
+yes | pacman -S neovim networkmanager
+systemctl enable NetworkManager
 bootctl --path=/boot install
 
 echo "title ArchLinux" > /boot/loader/entries/arch.conf
