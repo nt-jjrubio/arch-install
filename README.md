@@ -4,7 +4,7 @@
 ```
 ## TODO
 - [x] locale-gen
-- [ ] /etc/hosts
+- [x] /etc/hosts
 - [ ] Crear usuarios
 - [ ] Zona horaria
 
