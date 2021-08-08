@@ -34,7 +34,7 @@ pacstrap /mnt base base-devel linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt sh -c "$(curl -fsSL http://192.168.1.51:8080/chrootInstall.sh)"; 
+arch-chroot /mnt sh -c "$(curl -fsSL http://192.168.1.5:8080/chrootInstall.sh)"; 
 umount /dev/sda1
 umount /dev/sda2
 
