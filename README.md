@@ -7,5 +7,6 @@
 - [x] /etc/hosts
 - [ ] Crear usuarios
 - [ ] Zona horaria
-
+- [ ] Seleccionar EFI o MBR
+- [ ] Seleccionar Escritorio
 
